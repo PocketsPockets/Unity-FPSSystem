@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FPSPlayer : FPSBaseController
 {
-    //Basic FPSController using the FPSBaseController class
+    //FPSController example using the FPSBaseController class
     #region Variables
     public float currentSpeed;
     public float baseSpeed;
