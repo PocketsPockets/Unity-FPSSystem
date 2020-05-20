@@ -46,7 +46,7 @@ public class FPSBaseController : MonoBehaviour
 
     #region Class Methods
     //Handles the basic movement of the player using Unity's standard input system
-    public void PlayerMovement(float speed)
+    protected void PlayerMovement(float speed)
     {
         //Standard fps movement input using WASD
         moveVertical = Input.GetAxis("Vertical") * speed;
@@ -75,7 +75,7 @@ public class FPSBaseController : MonoBehaviour
     }
     //Crouch method, sets isCrouch to true, halves the character controller's height, 
     //offsets the controllers center to prevent clipping through floor. Does not effect speed
-    public void Crouch()
+    protected void Crouch()
     {
         if (Input.GetKeyDown(KeyCode.C) && !isCrouch)
         {
@@ -89,7 +89,7 @@ public class FPSBaseController : MonoBehaviour
         }
     }
 
-    public void Gravity()
+    protected void Gravity()
     {
         if (charController.isGrounded)
             verticalVelocity = 0;
